@@ -1,0 +1,12 @@
+{
+  "formatVersion": 1,
+  "packId": "pokeslop",
+  "title": "pokeslop",
+  "publisher": {
+    "name": "pokeda",
+    "url": null
+  },
+  "license": null,
+  "minHarmonia": "0.1.1.2",
+  "signingKeyFingerprint": "306aac08b995dbe56414c99ea06ddf5dfc250b0c9f63d166562d87f4a360902e"
+}
