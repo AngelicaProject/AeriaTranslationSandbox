@@ -1,4 +1,4 @@
-# Aeria merge check. Added by Aeria 0.1.0-nightly.17; Aeria offers to update it.
+# Aeria merge check. Added by Aeria 0.1.0-nightly.18; Aeria offers to update it.
 #
 # GitHub merges pull requests as plain text and lets files be edited on the
 # website, while Aeria merges translations per string and validates the
@@ -32,8 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      AERIA_CHECK_URL: "https://github.com/AngelicaProject/Aeria/releases/download/aeria-check-nightly/aeria-check-0.1.0-nightly.17-x86_64-unknown-linux-gnu.tar.gz"
-      AERIA_CHECK_SHA256: "cfe92f07ebdf6721dac04aacbbae74a95a2620956db29c25731138daf745629b"
+      AERIA_CHECK_URL: "https://github.com/AngelicaProject/Aeria/releases/download/aeria-check-nightly/aeria-check-0.1.0-nightly.18-x86_64-unknown-linux-gnu.tar.gz"
+      AERIA_CHECK_SHA256: "ee7f3c01daa8caf4ce57b32caaad66b9f681dd8ffb84bbc532a65c3b5b339d62"
       PROJECT: "."
     steps:
       # Two commits: a pull request's test merge and the base it merges into.
@@ -42,7 +42,7 @@ jobs:
           fetch-depth: 2
           persist-credentials: false
 
-      - name: Install aeria-check 0.1.0-nightly.17
+      - name: Install aeria-check 0.1.0-nightly.18
         run: |
           curl --fail --silent --show-error --location "$AERIA_CHECK_URL" --output "$RUNNER_TEMP/aeria-check.tar.gz"
           echo "$AERIA_CHECK_SHA256  $RUNNER_TEMP/aeria-check.tar.gz" | sha256sum --check --strict
